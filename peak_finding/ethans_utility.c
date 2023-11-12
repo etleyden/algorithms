@@ -10,6 +10,17 @@ void print_array(int* array, int size) {
     printf("\n");
 }
 
+void print2d_array(int** array, int n, int m) {
+    int i;
+    for(i = 0; i < n; i++) {
+        int j;
+        for(j = 0; j < m; j++) {
+            printf("%4d ", array[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 clock_t* start_time() {
     clock_t *begin = (clock_t*) malloc(sizeof(clock_t));
     *begin = clock();
